@@ -3,8 +3,8 @@
 (defn verifica-palindromo
       [word]
       (let [reverse-word (reverse word)
-            new-word (clojure.string/join "" reverse-word)]
-        (if (= 0 (compare word new-word))
+            join-reverse-word (clojure.string/join "" reverse-word)]
+        (if (= 0 (compare word join-reverse-word))
           (println word "é palindromo")
           (println word "nao é palindromo"))))
 
@@ -14,3 +14,4 @@
 (verifica-palindromo "goiaba")
 (verifica-palindromo "anilina")
 (verifica-palindromo "reviver")
+(verifica-palindromo "reviveR")
