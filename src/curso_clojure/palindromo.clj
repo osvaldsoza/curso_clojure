@@ -4,8 +4,10 @@
       [word]
       (let [reverse-word (reverse word)
             join-reverse-word (clojure.string/join "" reverse-word)]
+        ;(println reverse-word)
+        ;(println join-reverse-word)
         (if (= 0 (compare word join-reverse-word))
-          (println word "é palindromo")
+          (println word "é palindromo" word word)
           (println word "nao é palindromo"))))
 
 (verifica-palindromo "ovo")

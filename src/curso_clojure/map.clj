@@ -1,0 +1,19 @@
+(ns curso-clojure.map)
+
+(defn aplica-desconto?
+  [valor-bruto]
+  (> valor-bruto 100))
+
+(def precos [30 700 1000])
+
+
+(defn valor-descontado
+  [valor-bruto]
+  (if (aplica-desconto? valor-bruto)
+    (let [taxa-desconto (/ 10 100)
+          desconto (* valor-bruto taxa-desconto)]
+      (- valor-bruto desconto))
+    valor-bruto))
+
+
+(println (map valor-descontado precos))
